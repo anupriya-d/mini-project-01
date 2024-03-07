@@ -1,0 +1,38 @@
+
+
+section {
+    padding: 2em 0;
+}
+
+#first-heading{
+    text-align: center;
+    margin:30px;
+    font-family: "Concert One", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    animation: animation1 3s;
+    animation-iteration-count: infinite;
+    border: 2px solid green;
+
+}
+
+#grid{
+    background-color: slategray;
+}
+
+#nav-main{
+    background-color: #2fca2c;
+    font-size: 1rem;
+   font-weight: bold;
+   
+}
+
+@keyframes animation1{
+    from{
+        color: #2fca2c;
+
+    }
+    to{
+        color: #000000;
+    }
+}
