@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokemon Pokedex</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+</head>
+
+
+<body>
+
+  <style>
+    section{
+     height: 100vh;
+     
+    }
+ </style>
+  <div class="container">
+
+
+    <nav class="navbar navbar-expand-lg " id="nav-main">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-2 mx-3 px-5" href="index.html">Home </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mt-1 ms-auto">
+              
+              <a class="nav-link active mx-3 px-4"  href="findyour.html">Find Pokemon</a>
+              <a class="nav-link active mx-3 px-4"  href="cards.html">Cards</a>
+              <a class="nav-link active mx-3 px-4"  href="rank.html">Rank</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container" id="grid">
+    <div class="container">
+
+
+      <div class="container text-center my-2  px-0">
+        <div class="row g-1">
+          <div class="col-md-4 col-sm-4 container-fluid">
+            <div class="m-4 f-poke-card">
+              <div class="img1 "> <img src="/asset/25.png" id="f-pokemon-img" height="200" width="200" alt="pokemon image">
+              </div>
+              <h3 id="f-pokemon-name">Pikachu</h3>
+              <hr>
+              <div class="col ">
+                <p id="f-id">ID IS: 25</p>      
+                <span class="col-md-6" id="f-xp">BASE EXP:112</span>
+                <p class="" id="f-type">TYPE:electric</p>
+                <p id="f-weight">WEIGHT:60</p>
+                <p id="f-height">HEIGHT:4</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 container-fluid">
+            <div id="echart-container" style="width: 450px; height: 300px;"></div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+      
+
+      <h3 id="errMsg"></h3>
+
+      <div class="container mt-4">      
+          <input type="text" id="textInput" placeholder="Enter text">
+          <button onclick="findPokemon()">Find Pokemon</button>
+        </div>
+
+    </section>
+
+      <script src="fscript.js"></script>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
