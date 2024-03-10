@@ -4,94 +4,69 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokemon</title>
+    <title>Pokemon ||</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 
 <body>
+ 
+ 
     <div class="container">
 
 
-          <nav class="navbar navbar-expand-lg p-3" id="nav-main">
+          <nav class="navbar navbar-expand-lg " id="nav-main">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Home</a>
+              <a class="navbar-brand fs-2 mx-3 px-5" href="index.html">Home </a>
+              
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mt-1 ms-auto">
-                    <a class="nav-link active"  href="checkyour.html">Find Pokemon</a>
-                    <a class="nav-link active"  href="#">Cards</a>
-                    <a class="nav-link active"  href="#">Rank</a>
-                    <a class="nav-link active"  href="#">Fun</a>
+                    
+                    <a class="nav-link active mx-3 px-4"  href="findyour.html">Find Pokemon</a>
+                    <a class="nav-link active mx-3 px-4"  href="cards.html">Cards</a>
+                    <a class="nav-link active mx-3 px-4"  href="rank.html">Rank</a>
                 </div>
               </div>
             </div>
           </nav>
-
-    <!-- grids -->
+    
+ 
     <section class="container" id="grid">
-        <h2 id="first-heading">Home of Pokémon </h2>
+        <div class="container-fluid">
+        <h2 id="first-heading">Home of Pokémon<span><iconify-icon icon="ic:round-catching-pokemon" class="poke-ico" width="60" height="60"></iconify-icon></span> </h2>
+    </div>
      
 
-        <div class="container text-center my-2 overflow-hidden px-0">
-            <div class="row g-1"> <!-- change the gutter number to increase the gap between columns -->
+        <div class="container text-center my-2  px-0">
+            <div class="row g-1">
                 <div class="col  col-12 col-md-6 " id="pokemon-area-1">
                 <h3 id="pokemon-name"></h3> 
                 <img src="" id="pokemon-img" alt="">
+                
                 </div>
                 <div class="col col-12 col-md-6">
-                <img src="/asset/ash.png" height="700" width="450">
+                <img src="/asset/ash.png" height="650" width="350">
                 </div>
             </div>
         </div>
+        <a href="findyour.html" id="find-pokemon">Find Your Pokémon <span><iconify-icon icon="mingcute:arrow-right-fill"></iconify-icon></span> </a>
     </section>
 
-    <!-- cards -->
-    <section class="container" id="cards">
-        <div class="row">
-            <div class="col-sm-6 col-md-4 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment #1</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 mb-3">
-                <div class="card" data-bs-theme="dark">
-                    <div class="card-body text-body">
-                        <h5 class="card-title">Special title treatment #2</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Do something</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment #3</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Be someone</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="alert alert-dark" role="alert"> Pokemon stories</p>
-    </section>
+ 
+    </div>
+    
 
-    <script src="script.js"></script>
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="hscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 
