@@ -101,6 +101,15 @@ button{
     
 }
 
+#textInputRange{
+    padding: 10px;
+    margin: 30px;
+    width: 250px;
+    border: none;
+    background-color: #ffffff;
+    
+}
+
 input{
     border: none;
 }

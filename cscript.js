@@ -1,6 +1,6 @@
 
 function getPokemons() {
-    return axios.get('https://pokeapi.co/api/v2/pokemon/?limit=20')
+    return axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=20`)
         .then(response => response.data.results)
         .catch(error => {
             console.error('Error fetching data:', error);

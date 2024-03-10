@@ -1,7 +1,7 @@
 async function findPokemon() {
   let findPokeName = document.getElementById("textInput").value.toLowerCase();
   console.log(findPokeName);
-  let fpokeType = "normal";
+                                    // let fpokeType = "electric";
   try {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${findPokeName}` //find pokemon for given name
@@ -10,10 +10,9 @@ async function findPokemon() {
     const fpokemonName = data.name.toUpperCase();
     const fpokemonImgUrl = data.sprites.other["official-artwork"].front_default;
     const fpokemonId = data.id;
-    const fXp = data.base_experience;
     fpokeType = data.types[0].type.name;
     const fpokeW = data.weight;
-    const fpokeH = data.height;  //extract data for pokemon card
+    const fpokeH = data.height; //extract data for pokemon card
 
     const fpokeStatV0 = data.stats[0].base_stat; // each data for plot the graph
     const fpokeStatN0 = data.stats[0].stat.name;
@@ -28,7 +27,8 @@ async function findPokemon() {
     const fpokeStatV5 = data.stats[5].base_stat;
     const fpokeStatN5 = data.stats[5].stat.name;
 
-    let baseStatArr = [ // put in to a array each stats 
+    let baseStatArr = [
+      // put in to a array each stats
       fpokeStatV0,
       fpokeStatV1,
       fpokeStatV2,
@@ -37,7 +37,8 @@ async function findPokemon() {
       fpokeStatV5,
     ];
 
-    let statNameArr = [ // put in to a array each stats types names 
+    let statNameArr = [
+      // put in to a array each stats types names
       fpokeStatN0,
       fpokeStatN1,
       fpokeStatN2,
@@ -52,16 +53,16 @@ async function findPokemon() {
     document.getElementById("f-pokemon-name").innerHTML = fpokemonName;
     document.getElementById("f-pokemon-img").src = fpokemonImgUrl;
     document.getElementById("f-id").innerHTML = `ID IS: ${fpokemonId}`;
-    document.getElementById("f-xp").innerHTML = `BASE EXP: ${fXp}`;
     document.getElementById("f-type").innerHTML = `TYPE : ${fpokeType}`;
     document.getElementById("f-weight").innerHTML = `WEIGHT: ${fpokeW}`;
     document.getElementById("f-height").innerHTML = `HEIGHT:${fpokeH}`;
 
-    document.getElementById("errMsg").innerHTML = '';
+    document.getElementById("errMsg").innerHTML = "";
   } catch (error) {
     console.error("Erro fetching pokemon data:", error);
-    document.getElementById("errMsg").innerHTML=`No Pokemon Found,Enter Correct Name !`;
-
+    document.getElementById(
+      "errMsg"
+    ).innerHTML = `No Pokemon Found,Enter Correct Name !`;
   }
 
   const colours = {
@@ -88,30 +89,45 @@ async function findPokemon() {
   document.querySelector(".f-poke-card").style.backgroundColor =
     colours[fpokeType];
 
+  function plotStats(baseStatArr, statNameArr) {
+    var myChart = echarts.init(document.getElementById("echart-container"));
 
-
-
-    function plotStats(baseStatArr, statNameArr) {
-
-        var myChart = echarts.init(document.getElementById("echart-container"));
-      
-        var option = {   
-          xAxis: {
-            type: "category",
-            data: statNameArr,
-            axisLabel: { rotate:30}, 
+    var option = {
+      title: {
+        text: "Pokemon Base Stats",
+        textStyle: {
+          color: "#333",
+          fontSize: 18,
+          fontWeight: "bold",
+        },
+        left: "center",
+      },
+      xAxis: {
+        type: "category",
+        data: statNameArr,
+        axisLabel: {
+          rotate: 30,
+          textStyle: {
+            fontWeight: "bold",
           },
-          yAxis: {
-            type: "value",
+        },
+      },
+      yAxis: {
+        type: "value",
+      },
+      grid: {},
+      series: [
+        {
+          data: baseStatArr,
+          type: "bar",
+          itemStyle: {
+            color: "#D83F31",
+            backgroundColor: "#EE9322",
           },
-          series: [
-            {
-              data: baseStatArr,
-              type: "bar",
-            },
-          ],
-        };
-      
-        myChart.setOption(option);
-      }
+        },
+      ],
+    };
+
+    myChart.setOption(option);
+  }
 }
